@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primario:#000000;
+    --color-secndario: #f6f6f6;
+    --color-terciario: #22D4FD;
+    --color-hover: #272727;
+
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-Krona: "Krona One", sans-serif;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    background-color: var(--color-primario); /* color del fondo*/ 
+    color: var(--color-secndario);
+    box-sizing: border-box;
+}
+
+.header{
+    padding: 2% 0 0 15%;
+}
+
+.header__menu{
+    display: flex;
+    gap: 80px;
+
+}
+
+.header__menu__link{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.Presentacion{
+    padding: 3% 15%; 
+    display: flex;
+    align-items: center; /* para centrar*/ 
+    justify-content: space-between; /*genera un espacio entre los elementos*/
+    gap: 82px;
+}
+
+.Presentacion__contenido{
+    width: 50%;
+    display: flex; /*coloca los cuadrados uno al lado del otro */
+    flex-direction: column;
+    gap: 40px; /*espacios entre filas y columnas en diseños de cuadrícula
+    agrega espacios iguales entre cada cuadrado*/
+    
+}
+
+.Presentacion__contenido__titulo{
+    font-size: 2.25rem; /*fuente de la letra*/
+    font-family: var(--fuente-Krona); /* tipo de letra*/ 
+}
+
+.titulo-destaque{
+    color: var(--color-terciario);
+}
+
+.Presentacion__contenido__texto{
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserrat);
+}
+
+.Presentacion__enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center; /* para centrar cuando estamos en la vertical*/
+    gap: 32px;
+}
+
+.Presentacion__enlaces__subtitulo{
+    font-family: var(--fuente-Krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+
+} 
+
+.Presentacion__enlaces__link{
+    width: 50%;
+    text-align: center;
+    padding: 21.5px 0; /*El área de relleno de un elemento entre su contenido y su borde.*/ 
+    border-radius: 8px; /*redondea los bordes de la caja*/
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none; /*quita la decoracion como el subrayado*/
+    color:var(--color-secndario); /* color de la letra*/
+    border: 2px solid var(--color-terciario); /*tamaño del borde, estilo del borde*/
+    display: flex;
+    justify-content: center; /* para centrar cuando estamos en la horizontal*/
+    gap: 10px;
+}
+/* hover, para que el botón cambie de color cuando pasas el mause sobre ellos*/
+.Presentacion__enlaces__link:hover{
+    background-color: var(--color-hover);
+}
+
+.presentacion__imagen{
+    width: 50%;
+}
+
+.footer{
+    background-color:var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center; /*centrar el texto*/
+    font-family:var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+
+}
+
+@media (max-width: 1200px){
+
+    .header{
+        padding: 10%;
+    }
+
+    .header__menu{
+        justify-content: center;
+    } 
+
+    .Presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .Presentacion__contenido{
+        width: auto;
+    }
+
+}
